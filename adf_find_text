@@ -1,0 +1,13 @@
+IFS="
+"
+
+for file in $(find $1 -name "*")
+do
+  if [ ! -d $file ]; then
+    result=$(cat $file | grep $2)
+
+    if [ ! -z "$result" ]; then
+      echo $file
+    fi
+  fi
+done
