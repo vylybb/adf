@@ -1,0 +1,1 @@
+git checkout $(adf_git_branch_by_fragment $1)
