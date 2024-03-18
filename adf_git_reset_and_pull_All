@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd /home/dev/development/projects
+for dir in $(ls -1)
+do
+cd $dir
+git reset --hard
+git checkout master
+git pull
+cd ..
+done
