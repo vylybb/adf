@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd /home/dev/Development/projects
+for ui in $(find . -name "*-ui)
+do 
+if [ -d $ui ]; then
+cd $ui
+npm install 
+cd -
+fi
+done
