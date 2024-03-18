@@ -1,0 +1,5 @@
+#!/bin/bash
+git checkout -b feature/$1
+git add --all
+git commit -m "$1: $2"
+git push --set-upstream origin feature/$1
