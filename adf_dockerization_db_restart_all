@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd $HOME/development/projects/autorisaziun-tools-devops/docker/run
+
+for stop_command in $(ls -1 | grep down | grep db | grep .sh)
+do
+  echo $stop_command
+  $stop_command
+done
+
+for start_command in $(ls -1 | grep up | grep db | grep .sh)
+do
+  echo $start_command
+  $start_command
+done
