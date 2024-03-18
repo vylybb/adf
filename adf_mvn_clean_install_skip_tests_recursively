@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ -f *pom.xml ]; then
+  figlet $PWD
+  for dir in $(ls -1)
+    do
+    if [ -d $dir ]; then
+      cd $dir
+      $0
+      cd ..
+    fi
+    done
+  mvn clean install -DskipTests=true
+fi
